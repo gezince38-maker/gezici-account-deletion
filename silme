@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gezici - Hesap Silme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin: 0;
+            font-size: 28px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning h3 {
+            color: #856404;
+            margin: 0 0 10px 0;
+        }
+        
+        .warning p {
+            color: #856404;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .steps h3 {
+            color: #333;
+            margin: 0 0 15px 0;
+        }
+        
+        .steps ol {
+            color: #666;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+        
+        .contact {
+            background: #e3f2fd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .contact h3 {
+            color: #1976d2;
+            margin: 0 0 10px 0;
+        }
+        
+        .contact p {
+            color: #1976d2;
+            margin: 0 0 5px 0;
+        }
+        
+        .button {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+            transition: transform 0.2s;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .button.danger {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .app-link {
+            background: #4facfe;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 5px;
+            font-weight: 500;
+        }
+        
+        .app-link:hover {
+            background: #3d8bfe;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🏔️</div>
+            <h1>Hesap Silme</h1>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Önemli Uyarı</h3>
+            <p>Hesabınızı silmek geri alınamaz bir işlemdir. Tüm verileriniz kalıcı olarak silinecektir.</p>
+        </div>
+
+        <div class="steps">
+            <h3>📱 Uygulama İçinden Hesap Silme</h3>
+            <ol>
+                <li>Gezici uygulamasını açın</li>
+                <li>Alt menüden "Daha Fazla" seçin</li>
+                <li>"Ayarlar" bölümüne gidin</li>
+                <li>"Hesabı Sil" butonuna tıklayın</li>
+                <li>Onay dialogunda "EVET, SİL" seçeneğini seçin</li>
+            </ol>
+        </div>
+
+        <div class="contact">
+            <h3>📧 Yardıma mı ihtiyacınız var?</h3>
+            <p>Hesap silme işlemi hakkında sorularınız için:</p>
+            <p><strong>E-posta:</strong> privacy@gezici.com</p>
+            <p><strong>Destek:</strong> support@gezici.com</p>
+        </div>
+
+        <button class="button" onclick="openEmail()">
+            📧 E-posta ile Hesap Silme Talebi
+        </button>
+
+        <a href="gezici://settings/delete-account" class="app-link">
+            📱 Uygulamayı Aç
+        </a>
+
+        <div class="footer">
+            <p><strong>Gezici Uygulaması</strong> - Hesap Silme Sayfası</p>
+            <p>Son güncelleme: 5 Ağustos 2025</p>
+            <p>Bu sayfa Google Play Store ve App Store gereksinimlerini karşılamak için oluşturulmuştur.</p>
+        </div>
+    </div>
+
+    <script>
+        function openEmail() {
+            const subject = 'Hesap Silme Talebi';
+            const body = `Merhaba,
+
+Hesabımı silmek istiyorum.
+
+Kullanıcı Bilgileri:
+- E-posta: [BURAYA E-POSTA ADRESİNİZİ YAZIN]
+- Kullanıcı ID: [BURAYA KULLANICI ID'NİZİ YAZIN]
+
+Lütfen hesabımı ve tüm verilerimi silin.
+
+Teşekkürler.`;
+
+            const mailtoLink = `mailto:privacy@gezici.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        }
+
+        // Deep link handling
+        function openApp() {
+            const appUrl = 'gezici://settings/delete-account';
+            const fallbackUrl = 'https://play.google.com/store/apps/details?id=com.company.gezici';
+            
+            // Try to open the app
+            window.location.href = appUrl;
+            
+            // Fallback to Play Store after 2 seconds
+            setTimeout(() => {
+                window.location.href = fallbackUrl;
+            }, 2000);
+        }
+
+        // Auto-detect if user is on mobile
+        if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.addEventListener('DOMContentLoaded', function() {
+                const appButton = document.querySelector('.app-link');
+                appButton.style.display = 'block';
+            });
+        }
+    </script>
+</body>
+</html>
